@@ -1,5 +1,11 @@
 # moai-untz
-an experiment on moai sdk's untz audio library
+An experiment on moai sdk's untz audio library.
+
+Build UNTZ on OSX, and a simple demo program that uses it.
+
+This demo tries to implement realtime streaming synthesis.
+
+
 
 # license
 
