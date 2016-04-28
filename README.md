@@ -5,7 +5,9 @@ Build UNTZ on OSX, and a simple demo program that uses it.
 
 This demo tries to implement realtime streaming synthesis.
 
+# What?
 
+Please see main.cpp, it says all.
 
 # license
 
