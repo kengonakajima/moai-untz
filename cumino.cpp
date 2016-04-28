@@ -19,7 +19,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#include "snappy/snappy-c.h"
 
 
 #include "cumino.h"
@@ -560,20 +559,6 @@ void endMeasure() {
 
 ///////////
 
-int memCompressSnappy( char *out, int outlen, char *in, int inlen ) {
-    size_t maxsz = snappy_max_compressed_length(inlen);
-    assertmsg( outlen >= maxsz, "snappy requires buffer size:%d given:%d", maxsz, outlen );
-    size_t osz = outlen;
-    snappy_status ret = snappy_compress( in, inlen, out, &osz);
-    if(ret == SNAPPY_OK ) return (int)osz; else assertmsg(false,"snappy_compress failed. outlen:%d inlen:%d ret:%d", outlen, inlen,ret );
-    return 0;
-}
-int memDecompressSnappy( char *out, int outlen, char *in, int inlen ) {
-    size_t osz = outlen;
-    snappy_status ret = snappy_uncompress( in, inlen, out, &osz );
-    if(ret == SNAPPY_OK ) return osz; else assertmsg(false,"snappy_uncompress failed: %d", ret );
-    return 0;
-}
 
 
 unsigned int hash_pjw( const char* s ) {

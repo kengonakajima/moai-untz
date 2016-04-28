@@ -4,12 +4,14 @@
 # brew install libogg
 # brew install libvorbis
 
-OBJS=AudioMixer.o BufferedAudioSource.o BufferedAudioSourceThread.o UntzSound.o OggAudioSource.o UserAudioSource.o MemoryAudioSource.o ExtAudioFileAudioSource.o UntzSystem.o main.o
+OBJS=AudioMixer.o BufferedAudioSource.o BufferedAudioSourceThread.o UntzSound.o OggAudioSource.o UserAudioSource.o MemoryAudioSource.o ExtAudioFileAudioSource.o UntzSystem.o main.o cumino.o
 
 CFLAGS=-I./include -I./src -I/usr/local/include -Isrc/native/ios -DMACOSX
 
 all: synth
 
+cumino.o : cumino.cpp
+	g++ -c $(CFLAGS) cumino.cpp
 AudioMixer.o : src/AudioMixer.cpp
 	g++ -c $(CFLAGS) src/AudioMixer.cpp 
 BufferedAudioSource.o : src/BufferedAudioSource.cpp

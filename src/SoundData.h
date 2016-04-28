@@ -31,7 +31,8 @@ namespace UNTZ
 			mState.mLoopStart = 0.0;
 			mState.mLoopEnd = 0.0;
 
-			mPlayState == kPlayStateStopped;
+            //			mPlayState == kPlayStateStopped;
+            mPlayState = kPlayStateStopped;
 		};
 
 		PlayState getState() const { return mPlayState; }
