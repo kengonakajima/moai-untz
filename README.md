@@ -1,5 +1,5 @@
 # moai-untz
-An experiment on moai sdk's untz audio library.
+A tutorial on moai sdk's untz audio library.
 
 Build UNTZ on OSX, and a simple demo program that uses it.
 
