@@ -13,6 +13,9 @@ Makefile is only for MacOS X, tested on El Capitan and clang 7.0.2.
 Please see main.cpp, it says all.
 
 
+# Original UNTZ code
+
+https://github.com/moai/moai-dev/tree/develop/3rdparty/untz
 
 
 # license
